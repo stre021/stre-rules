@@ -50,7 +50,7 @@ ruleset=🐟 漏网之鱼,[]FINAL
 
 ;设置分组标志位
 custom_proxy_group=🚀 节点选择`select`[]🇭🇰 香港节点`[]🇨🇳 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🚀 手动切换`[]DIRECT
-custom_proxy_group=🚀 手动切换`select`*
+custom_proxy_group=🚀 手动切换`select`(5.0|5倍|5x|10x|8x|3x|Brazil|Canada|Korea)
 custom_proxy_group=📲 电报消息`select`(Singapore|United States)
 custom_proxy_group=📲 Twitter`select`[]🚀 节点选择`[]🇸🇬 狮城节点`[]🇭🇰 香港节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🚀 手动切换`[]DIRECT
 custom_proxy_group=📹 油管视频`select`[]🚀 节点选择`[]🇸🇬 狮城节点`[]🇭🇰 香港节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🚀 手动切换`[]DIRECT
@@ -70,7 +70,7 @@ custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 节点选择
 custom_proxy_group=🛑 广告拦截`select`[]REJECT`[]DIRECT
 custom_proxy_group=🍃 应用净化`select`[]REJECT`[]DIRECT
 custom_proxy_group=🐟 漏网之鱼`select`[]🚀 节点选择`[]DIRECT`[]🇭🇰 香港节点`[]🇨🇳 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`[]🚀 手动切换
-custom_proxy_group=🇭🇰 香港节点`url-test`(?=.*(Hong Kong))^((?!(5.0|5倍|5x|10x|8x|3x|Test)).)*$`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=🇭🇰 香港节点`url-test`(?=.*(Hong Kong))^((?!(5.0|5倍|5x|10x|8x|3x)).)*$`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇯🇵 日本节点`url-test`(?=.*(Japan))^((?!(5.0|5倍|5x|10x|8x|3x)).)*$`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇺🇲 美国节点`url-test`(?=.*(United States))^((?!(5.0|5倍|5x|10x|8x|3x)).)*$`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇸🇬 狮城节点`url-test`(?=.*(Singapore))^((?!(5.0|5倍|5x|10x|8x|3x)).)*$`http://www.gstatic.com/generate_204`300,,50
