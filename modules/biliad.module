@@ -28,7 +28,7 @@ hostname = %APPEND% app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, 
 #～BiliBili_哔哩哔哩_去除搜索中的大家都在搜@bm7
 #^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject
 #～BiliBili_哔哩哔哩_去除动态中的话题@bm7
-#^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
 #～BiliBili_哔哩哔哩_可能的一些推广(beta)@bm7
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject-dict
 #～BiliBili_哔哩哔哩_漫画去广告@ddgksf2013
