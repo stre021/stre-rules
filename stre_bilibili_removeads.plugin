@@ -4,11 +4,12 @@
 #!author = RuCu6 VirgilClyne Maasea ClydeTimea BiliUniverse kokoryh app2smile 
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Bilibili.png
-#!date = 2023-09-05 20:58:53
+#!date = 2023-10-21 07:25:07
 
 [Rule]
-DOMAIN, mall.bilibili.com, REJECT
-DOMAIN, passport.bilibili.com, REJECT
+# 仅QX需要启用此规则，Loon无需启用。
+# DOMAIN, mall.bilibili.com, REJECT
+# DOMAIN, passport.bilibili.com, REJECT
 
 [Rewrite]
 # 移除搜索中的默认关键词
@@ -18,7 +19,7 @@ DOMAIN, passport.bilibili.com, REJECT
 # 移除动态中的话题
 ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr reject-dict
 # 移除动态中的最常访问
-#^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist reject-dict
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist reject-dict
 # 可能的一些推广(beta)
 ^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? reject-dict
 # 直播广告
@@ -60,7 +61,7 @@ http-response ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Teena
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(brand\/list|event\/list2|list|show)\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除开屏广告
 
 # 移除首页推荐广告
-#http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除首页推荐广告
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除首页推荐广告
 
 # 移除右上角活动入口
 http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除右上角活动入口
@@ -72,7 +73,7 @@ http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story script-pa
 http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 精简首页顶部标签
 
 # 移除热搜广告
-#http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除热搜广告
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除热搜广告
 
 # 移除观影页广告
 http-response ^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab\?) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除观影页广告
